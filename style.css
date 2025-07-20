@@ -1,5 +1,14 @@
 body {
-  background-color: #ffffff;
+  background: linear-gradient(
+    -45deg,
+    #cecac5 0%,    /* Bege começando em 0% */
+    #cda6ac 35%,   /* Rosa suave começando em 35% */
+    #9e9c9c 65%,   /* Preto começando em 65% */
+    #e6c594 100%   /* Bege voltando em 100% */
+  );
+  background-size: 600% 600%; /* Aumentamos o tamanho para uma transição mais ampla */
+  animation: gradientMovement 20s ease infinite; /* Aumentamos um pouco a duração */
+
   color: #000000;
   font-family: 'Playfair Display', serif;
   margin: 0;
@@ -9,7 +18,19 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
+  overflow: hidden;
 }
+
+@keyframes gradientMovement {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 
 .container {
   padding: 20px;
