@@ -79,6 +79,7 @@ h1 {
   text-decoration: none;
   padding: 12px 20px;
   border-radius: 30px;
+  border: 2px solid #181818;
   font-size: 1em;
   display: inline-flex;
   justify-content: center;
@@ -90,12 +91,14 @@ h1 {
 }
 
 .btn:hover {
-  background-color: #333333;
+  background-color:  #cda6ac;
 }
 
 .btn.disabled {
-  background-color: #555555;
+  background-color:  #cda6ac;
   cursor: default;
+  border: 2px solid #232223; /* Borda adicionada */
+
 }
 
 footer {
