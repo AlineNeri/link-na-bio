@@ -112,61 +112,34 @@ footer {
 }
 
 @media (max-width: 600px) {
-    body {
-        overflow: hidden;
-    }
+  body {
+    padding: 30px 15px; /* ADICIONADO: garante espaço ao redor */
+    overflow: auto;
+  }
 
-    .main-content-wrapper {
-        /* O padding-top controla o espaço do logo *acima* do card */
-        padding-top: 60px; /* Ajuste para centralizar o logo menor */
-        margin: 20px auto;
-        /* Limita a largura total do conjunto (card + logo) */
-        max-width: 360px; /* Ajuste para a proporção do seu card no celular */
-    }
+  .container {
+    padding: 20px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 90vw; /* garante que não ocupe 100% */
+    margin: 0 auto;
+  }
 
-    .container {
-        /* Padding interno do card no celular para replicar o "ar" do desktop */
-        padding: 30px 20px; /* Mantém um bom padding, como no desktop */
-        border-radius: 30px; /* Mantém o mesmo border-radius do desktop */
-        width: 95%; /* Ocupa 95% da largura do main-content-wrapper */
-        /* Reduz o max-width para dar ao card uma proporção mais "quadrada" */
-        max-width: 320px; /* Este valor é CRÍTICO para a proporção do card */
-        max-height: none; /* Garante que o conteúdo não seja cortado */
-    }
+  .btn {
+    font-size: 0.95em;
+    padding: 10px 16px;
+  }
 
-    .profile-img {
-        width: 120px; /* Tamanho do logo IGUAL ao desktop */
-        height: 120px; /* Tamanho do logo IGUAL ao desktop */
-        border-width: 4px; /* Mantém a espessura da borda como no desktop */
-        /* Para descer o logo no celular, ajuste APENAS este 'top'.
-           Ele se refere ao topo do main-content-wrapper */
-        top: 15px; /* **AJUSTE AQUI:** Comece com 15px. Se precisar descer mais, aumente (20px, 25px...). */
-        /* left e transform são herdados e funcionam para centralização horizontal */
-    }
+  .profile-img {
+    width: 90px;
+    height: 90px;
+  }
 
-    h1 {
-        font-size: 1.9em; /* Mantém o tamanho da fonte IGUAL ao desktop */
-        margin-top: 25px; /* Mantém o espaçamento igual ao desktop */
-        margin-bottom: 10px;
-    }
+  h1 {
+    font-size: 1.5em;
+  }
 
-    .welcome {
-        font-size: 1em; /* Mantém o tamanho da fonte IGUAL ao desktop */
-        margin-bottom: 30px; /* Mantém o espaçamento IGUAL ao desktop */
-    }
-
-    .links {
-        gap: 15px; /* Mantém o espaçamento entre botões IGUAL ao desktop */
-    }
-
-    .btn {
-        font-size: 1em; /* Mantém o tamanho da fonte IGUAL ao desktop */
-        padding: 12px 20px; /* Mantém o padding IGUAL ao desktop */
-    }
-
-    footer {
-        margin-top: 40px; /* Mantém o espaçamento IGUAL ao desktop */
-        font-size: 0.9em; /* Mantém o tamanho da fonte IGUAL ao desktop */
-        padding: 0 15px; /* Mantém o padding IGUAL ao desktop */
-    }
+  .welcome {
+    font-size: 1em;
+   }
 }
