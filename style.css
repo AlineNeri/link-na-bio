@@ -112,48 +112,56 @@ footer {
 }
 
 @media (max-width: 600px) {
+    /* Não precisamos de padding no body aqui, o wrapper já centraliza */
     body {
-        /* REMOVIDO: padding aqui causava o deslocamento do layout no celular. */
-        padding: 0;
-        /* Revertido para hidden. 'auto' aqui pode interferir na centralização flexbox do body.
-           Se o conteúdo precisar de rolagem, é melhor que o .container tenha 'overflow-y: auto'
-           ou o body tenha 'overflow-y: auto' globalmente, mas não apenas na media query se
-           o objetivo é manter a centralização. */
-        overflow: hidden; 
+        overflow: hidden; /* Mantenha hidden para o background */
+    }
+
+    .main-content-wrapper {
+        padding-top: 50px; /* Ajusta o espaço superior para o logo no celular */
+        margin: 20px auto; /* Afasta o wrapper das bordas do celular e centraliza */
+        max-width: 380px; /* Ajusta a largura máxima do conjunto no celular */
     }
 
     .container {
-        padding: 20px; /* Mantém o padding interno para o celular, ajuste se necessário */
+        padding: 25px 15px; /* Reduz um pouco o padding interno do card para mobile */
+        max-width: 350px; /* Limita mais a largura do card no celular */
         border-radius: 20px;
-        width: 90%; /* Continua ocupando 90% da largura da tela */
-        max-width: 400px; /* Impede que o container fique muito largo em tablets */
-        /* ADICIONADO: Margem superior/inferior para afastar das bordas do celular.
-           'auto' para centralizar horizontalmente. */
-        margin: 20px auto; 
-        
-        /* ADICIONADO: Remove qualquer altura máxima que possa cortar o conteúdo no celular. */
-        max-height: none; 
+        /* margin: 0 auto; não precisa, main-content-wrapper já centraliza */
     }
 
     .profile-img {
-        width: 90px;
-        height: 90px;
-        /* ADICIONADO: Garante que o espaçamento abaixo do logo seja consistente.
-           (Herdaria 20px do CSS global, mas é bom explicitar aqui se for o ideal para mobile) */
-        margin-bottom: 20px; 
+        width: 100px; /* Reduz o logo para mobile */
+        height: 100px;
+        border-width: 4px; /* Borda mais fina no mobile */
+        top: 0px; /* Ajusta o topo do logo no mobile, pode precisar de ajuste fino */
+        /* O left: 50% e transform: translateX(-50%) já garantem a centralização */
     }
 
     h1 {
-        font-size: 1.5em;
-        margin-top: 0; /* Garante que não haja margem superior extra no h1 */
+        font-size: 1.6em; /* Ajuste para fonte menor no celular */
+        margin-top: 15px;
+        margin-bottom: 8px;
     }
 
     .welcome {
-        font-size: 1em;
+        font-size: 0.9em;
+        margin-bottom: 25px; /* Espaço entre o texto e os botões */
+    }
+
+    .links {
+        gap: 10px; /* Reduz um pouco o espaçamento entre os botões */
     }
 
     .btn {
-        font-size: 0.95em;
-        padding: 10px 16px;
+        font-size: 0.9em;
+        padding: 10px 18px;
+    }
+
+    footer {
+        margin-top: 25px; /* Espaço menor do footer para o card no celular */
+        font-size: 0.8em;
+        padding: 0 10px; /* Ajusta padding lateral do footer */
     }
 }
+   
