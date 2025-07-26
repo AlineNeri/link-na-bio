@@ -134,7 +134,7 @@ footer {
         width: 120px; 
         height: 120px;
         border-width: 5px; 
-        top: 5px; /* O logo ficará alinhado ao topo do main-content-wrapper */
+        top: 1px; /* O logo ficará alinhado ao topo do main-content-wrapper */
         /* left e transform são herdados e funcionam */
     }
 
