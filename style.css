@@ -108,13 +108,18 @@ footer {
   color: #000000 ;
 }
 
-/* RESPONSIVIDADE */
 @media (max-width: 600px) {
+  body {
+    padding: 30px 15px; /* ADICIONADO: garante espaço ao redor */
+    overflow: auto;
+  }
+
   .container {
-    padding: 25px 15px;
+    padding: 20px;
     border-radius: 20px;
     width: 100%;
-    max-width: 95vw;
+    max-width: 90vw; /* garante que não ocupe 100% */
+    margin: 0 auto;
   }
 
   .btn {
@@ -123,15 +128,15 @@ footer {
   }
 
   .profile-img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
 
   h1 {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
   .welcome {
-    font-size: 1em;
-  }
+    font-size: 1em;
+  }
 }
