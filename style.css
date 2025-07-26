@@ -136,8 +136,8 @@ footer {
     }
 
     .profile-img {
-        width: 130px; /* Tamanho do logo no celular (próximo ao desktop) */
-        height: 130px;
+        width: 120px; /* Tamanho do logo no celular (próximo ao desktop) */
+        height: 120px;
         border-width: 5px; /* Mantém a espessura da borda como no desktop */
         top: 0px; /* O logo ficará alinhado ao topo do main-content-wrapper */
         /* left e transform são herdados e funcionam */
