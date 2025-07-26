@@ -1,145 +1,224 @@
+/* SEU CÓDIGO CSS GLOBAL (PARA DESKTOP) - COM AS PROPRIEDADES PARA LOGO FLUTUANTE */
 body {
-  background: linear-gradient(
-    -45deg,
-    #f9f8f8 20%,    
-    #e4a9b2 45%,   
-    #cda6ac 30%,   
-    #2a2828 60%
-  );
-  background-size: 400% 400%; /* Aumentamos o tamanho para uma transição mais ampla */
-  animation: gradientMovement 15s ease infinite; /* Aumentamos um pouco a duração */
+    background: linear-gradient(
+        -45deg,
+        #f9f8f8 20%,
+        #e4a9b2 45%,
+        #cda6ac 30%,
+        #2a2828 60%
+    );
+    background-size: 400% 400%;
+    animation: gradientMovement 15s ease infinite;
 
-  color: #000000;
-  font-family: 'Playfair Display', serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
-  overflow: hidden;
+    color: #000000;
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Para centralizar o main-content-wrapper */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden; /* Para evitar barras de rolagem no desktop */
 }
 
 @keyframes gradientMovement {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* NOVO: Wrapper para centralizar o card e o footer juntos - ESSENCIAL PARA O LAYOUT */
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column; /* Organiza card e footer em coluna */
+    align-items: center; /* Centraliza card e footer horizontalmente */
+    width: 100%; /* Ocupa a largura total para ajudar na centralização */
+    max-width: 450px; /* Limita a largura máxima do conjunto no desktop */
+    position: relative; /* <--- FUNDAMENTAL: Pai para o logo absoluto */
+    padding-top: 80px; /* <--- Espaço superior para o logo "flutuar" acima do card no desktop */
+    box-sizing: border-box;
 }
 
 .container {
-  background-color: #fff;
-  padding: 20px 15px;
-  border-radius: 30px;
-  max-width: 420px;
-  width: 90%;
-  height: auto;
-  max-height: 500px; /* 🔸 Altura máxima controlada */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border: 5px solid #cda6ac;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+    background-color: #fff;
+    padding: 30px 25px; /* Padding do card no desktop */
+    border-radius: 30px;
+    max-width: 420px; /* Largura máxima do card no desktop */
+    width: 90%; /* Ocupa 90% da largura disponível no wrapper */
+    height: auto;
+    max-height: 500px; /* Altura máxima controlada para desktop */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 5px solid #cda6ac;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* REMOVIDO: justify-content: center; (era do layout antigo) */
+    align-items: center; /* Centraliza o conteúdo horizontalmente dentro do card */
+    margin-top: 0; /* Garante que não haja margem superior indesejada */
 }
 
 .profile-img {
-  width: 120px;
-  height: 120px;
-  border-radius:50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(15, 8, 8, 0.2);
-  border: 4px solid #cda6ac; /* Borda adicionada na imagem */
+    width: 120px; /* Tamanho do logo no desktop */
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    /* REMOVIDO: margin-bottom: 20px; (incompatível com position: absolute) */
+    box-shadow: 0 4px 8px rgba(15, 8, 8, 0.2);
+    border: 4px solid #cda6ac; /* Borda adicionada na imagem */
+    background-color: #fff; /* Fundo branco para a borda aparecer bem */
+
+    /* PROPRIEDADES DE POSICIONAMENTO ABSOLUTO PARA O LOGO NO DESKTOP */
+    position: absolute; /* <--- ESSENCIAL para o logo flutuar */
+    top: 0px; /* <--- Alinha o topo do logo ao topo do main-content-wrapper */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a centralização exata */
+    z-index: 10; /* Garante que o logo fique por cima de outros elementos */
 }
 
 h1 {
-  font-style: italic;
-  font-size: 1.9em;
-  margin-bottom: 10px;
+    font-style: italic;
+    font-size: 1.9em;
+    margin-top: 25px; /* <--- Ajuste para o desktop para dar espaço ao logo sobreposto */
+    margin-bottom: 10px;
 }
 
 .welcome {
-  font-style: italic;
-  margin-bottom: 30px;
+    font-style: italic;
+    margin-bottom: 30px;
 }
 
 .links {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .btn {
-  background-color: #000000;
-  color: #ffffff;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 30px;
-  border: 2px solid #181818;
-  font-size: 1em;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  transition: background 0.3s;
-  width: 100%; /* Garante que o botão se ajuste à largura do container */
-  box-sizing: border-box; /* Garante que o padding não estoure o botão */
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 2px solid #181818; 
+    font-size: 1em;
+    display: flex; /* Para centralizar ícone e texto */
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s;
+    width: 100%; /* Garante que o botão se ajuste à largura do container */
+    box-sizing: border-box; /* Garante que o padding não estoure o botão */
 }
 
 .btn:hover {
-  background-color:  #cda6ac;
+    background-color: #cda6ac;
 }
 
 .btn.disabled {
-  background-color:  #cda6ac;
-  cursor: default;
-  border: 2px solid #232223; /* Borda adicionada */
-
+    background-color: #cda6ac;
+    cursor: default;
+    border: 2px solid #232223;
 }
 
 footer {
-  margin-top: 40px;
-  font-size: 0.9em;
-  font-style: italic;
-  color: #000000 ;
+    margin-top: 40px; /* Espaço entre o card e o footer no desktop */
+    font-size: 0.9em;
+    font-style: italic;
+    color: #000000;
+    max-width: 400px; /* Limita a largura do texto do footer */
+    padding: 0 15px; /* Ajusta padding lateral do footer */
+    box-sizing: border-box;
 }
 
+/* ------------------------------------------------------------------ */
+/* PARTE RESPONSIVA: @media (max-width: 600px) - AGORA COM AJUSTES FINOS PARA MOBILE */
+/* ------------------------------------------------------------------ */
 @media (max-width: 600px) {
-  body {
-    padding: 30px 15px; /* ADICIONADO: garante espaço ao redor */
-    overflow: auto;
-  }
+    body {
+        /* Se o body no global já tem overflow: hidden, não precisa repetir */
+        /* padding: 0; */
+        /* overflow: hidden; */ 
+    }
 
-  .container {
-    padding: 20px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 90vw; /* garante que não ocupe 100% */
-    margin: 0 auto;
-  }
+    .main-content-wrapper {
+        /* Mantém o flex e centralização do conjunto, como no desktop */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        /* Controla o espaço entre o topo da tela do celular e o logo/card */
+        padding-top: 70px; /* **AJUSTE AQUI:** Se o conjunto todo estiver muito alto/baixo. */
+        margin: 20px auto; 
+        max-width: 380px; /* Limita a largura do conjunto no celular */
+    }
 
-  .btn {
-    font-size: 0.95em;
-    padding: 10px 16px;
-  }
+    .container {
+        padding: 30px 20px; /* Adapta o padding interno do card para o celular */
+        border-radius: 30px; /* Mantém o mesmo do desktop */
+        width: 95%; /* Ocupa a maior parte da largura do wrapper */
+        max-width: 320px; /* **AJUSTE AQUI:** Este valor é CRÍTICO para a proporção do card. */
+        height: auto;
+        max-height: none; /* Garante que o conteúdo não seja cortado */
+        /* Mantém flexbox para o conteúdo interno do card */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .profile-img {
-    width: 120px;
-    height: 120px;
-  }
+    .profile-img {
+        /* Para que o logo no CELULAR fique idêntico ao desktop em tamanho: */
+        width: 120px; 
+        height: 120px; 
+        border-width: 4px; /* Mesma borda do desktop. */
+        background-color: #fff; /* Garante fundo branco para a borda */
 
-  h1 {
-    font-size: 1.5em;
-  }
+        /* Propriedades de posicionamento para a logo no CELULAR */
+        position: absolute; /* ESSENCIAL: Mantém o comportamento de flutuar */
+        left: 50%;
+        transform: translateX(-50%); /* Centraliza horizontalmente */
+        z-index: 10; /* Garante que esteja por cima */
 
-  .welcome {
-    font-size: 1em;
-   }
+        /* PARA DESCER A LOGO NO CELULAR: AUMENTE ESTE VALOR. */
+        /* Ele move o logo para baixo em relação ao topo do main-content-wrapper. */
+        top: 30px; /* **AJUSTE CRÍTICO AQUI:** Comece com 30px. AUMENTE (40px, 50px...) para descer. */
+    }
+
+    h1 {
+        font-size: 1.9em; /* Mantém o tamanho da fonte IGUAL ao desktop */
+        margin-top: 25px; /* Mantém o espaçamento igual ao desktop */
+        margin-bottom: 10px;
+    }
+
+    .welcome {
+        font-size: 1em; /* Mantém o tamanho da fonte IGUAL ao desktop */
+        margin-bottom: 30px; /* Mantém o espaçamento IGUAL ao desktop */
+    }
+
+    .links {
+        gap: 15px; /* Mantém o espaçamento entre botões IGUAL ao desktop */
+    }
+
+    .btn {
+        font-size: 1em; /* Mantém o tamanho da fonte IGUAL ao desktop */
+        padding: 12px 20px; /* Mantém o padding IGUAL ao desktop */
+        width: 100%; /* Garante que o botão ocupe toda a largura disponível */
+    }
+
+    footer {
+        margin-top: 40px; /* Mantém o espaçamento IGUAL ao desktop */
+        font-size: 0.9em; /* Mantém o tamanho da fonte IGUAL ao desktop */
+        padding: 0 15px; /* Mantém o padding IGUAL ao desktop */
+    }
 }
+ 
+
+
+
+  
