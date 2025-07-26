@@ -83,6 +83,8 @@ h1 {
   align-items: center;
   gap: 10px;
   transition: background 0.3s;
+  width: 100%; /* Garante que o botão se ajuste à largura do container */
+  box-sizing: border-box; /* Garante que o padding não estoure o botão */
 }
 
 .btn:hover {
