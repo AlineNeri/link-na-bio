@@ -112,34 +112,48 @@ footer {
 }
 
 @media (max-width: 600px) {
-  body {
-    padding: 30px 15px; /* ADICIONADO: garante espaço ao redor */
-    overflow: auto;
-  }
+    body {
+        /* REMOVIDO: padding aqui causava o deslocamento do layout no celular. */
+        padding: 0;
+        /* Revertido para hidden. 'auto' aqui pode interferir na centralização flexbox do body.
+           Se o conteúdo precisar de rolagem, é melhor que o .container tenha 'overflow-y: auto'
+           ou o body tenha 'overflow-y: auto' globalmente, mas não apenas na media query se
+           o objetivo é manter a centralização. */
+        overflow: hidden; 
+    }
 
-  .container {
-    padding: 20px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 90vw; /* garante que não ocupe 100% */
-    margin: 0 auto;
-  }
+    .container {
+        padding: 20px; /* Mantém o padding interno para o celular, ajuste se necessário */
+        border-radius: 20px;
+        width: 90%; /* Continua ocupando 90% da largura da tela */
+        max-width: 400px; /* Impede que o container fique muito largo em tablets */
+        /* ADICIONADO: Margem superior/inferior para afastar das bordas do celular.
+           'auto' para centralizar horizontalmente. */
+        margin: 20px auto; 
+        
+        /* ADICIONADO: Remove qualquer altura máxima que possa cortar o conteúdo no celular. */
+        max-height: none; 
+    }
 
-  .btn {
-    font-size: 0.95em;
-    padding: 10px 16px;
-  }
+    .profile-img {
+        width: 90px;
+        height: 90px;
+        /* ADICIONADO: Garante que o espaçamento abaixo do logo seja consistente.
+           (Herdaria 20px do CSS global, mas é bom explicitar aqui se for o ideal para mobile) */
+        margin-bottom: 20px; 
+    }
 
-  .profile-img {
-    width: 90px;
-    height: 90px;
-  }
+    h1 {
+        font-size: 1.5em;
+        margin-top: 0; /* Garante que não haja margem superior extra no h1 */
+    }
 
-  h1 {
-    font-size: 1.5em;
-  }
+    .welcome {
+        font-size: 1em;
+    }
 
-  .welcome {
-    font-size: 1em;
-  }
+    .btn {
+        font-size: 0.95em;
+        padding: 10px 16px;
+    }
 }
