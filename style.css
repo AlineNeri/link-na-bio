@@ -117,29 +117,24 @@ footer {
     }
 
     .main-content-wrapper {
-        /* Ajusta o padding-top para o logo no celular (menor tamanho) */
-        padding-top: 70px; /* Ajustado para 70px, para centralizar o logo menor no espaço */
-        margin: 20px auto; /* Afasta o wrapper das bordas do celular e centraliza */
-        /* Reduz a largura máxima do conjunto para que o card tenha uma proporção mais compacta */
-        max-width: 380px; /* Este valor deve ser ajustado para a proporção ideal do card no celular */
+        padding-top: 70px; 
+        margin: 20px auto; 
+        max-width: 380px; 
     }
 
     .container {
-        /* Adapta o padding interno para simular o "ar" do desktop no card menor do celular */
-        padding: 30px 20px; /* Ajuste estes valores conforme a sensação de espaço */
-        border-radius: 25px; /* Pode suavizar um pouco menos o canto no celular */
-        width: 95%; /* Use uma porcentagem que ocupe bem a tela do celular */
-        /* Reduz a largura máxima do card para torná-lo mais "quadrado" no celular */
-        max-width: 350px; /* Este valor é crucial para a proporção do card */
-        /* Remove o max-height para evitar cortes */
+        padding: 30px 20px; 
+        border-radius: 25px; 
+        width: 95%; 
+        max-width: 350px; 
         max-height: none;
     }
 
     .profile-img {
-        width: 120px; /* Tamanho do logo no celular (próximo ao desktop) */
+        width: 120px; 
         height: 120px;
-        border-width: 5px; /* Mantém a espessura da borda como no desktop */
-        top: 0px; /* O logo ficará alinhado ao topo do main-content-wrapper */
+        border-width: 5px; 
+        top: 5px; /* O logo ficará alinhado ao topo do main-content-wrapper */
         /* left e transform são herdados e funcionam */
     }
 
