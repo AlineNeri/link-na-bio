@@ -131,8 +131,8 @@ footer {
     }
 
     .profile-img {
-        width: 120px; 
-        height: 120px;
+        width: 130px; 
+        height: 130px;
         border-width: 5px; 
         top: 0px; /* O logo ficará alinhado ao topo do main-content-wrapper */
         /* left e transform são herdados e funcionam */
