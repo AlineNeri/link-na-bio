@@ -6,8 +6,8 @@ body {
     #cda6ac 30%,   
     #2a2828 60%
   );
-  background-size: 600% 600%; /* Aumentamos o tamanho para uma transição mais ampla */
-  animation: gradientMovement 20s ease infinite; /* Aumentamos um pouco a duração */
+  background-size: 400% 400%; /* Aumentamos o tamanho para uma transição mais ampla */
+  animation: gradientMovement 15s ease infinite; /* Aumentamos um pouco a duração */
 
   color: #000000;
   font-family: 'Playfair Display', serif;
@@ -35,15 +35,18 @@ body {
 
 .container {
   background-color: #fff;
-  padding: 30px 20px;
+  padding: 20px 15px;
   border-radius: 30px;
   max-width: 420px;
   width: 90%;
-  margin: 0 auto;
+  height: auto;
+  max-height: 500px; /* 🔸 Altura máxima controlada */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   border: 5px solid #cda6ac;
   box-sizing: border-box;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .profile-img {
