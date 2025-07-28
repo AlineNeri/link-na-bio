@@ -1,10 +1,10 @@
 body {
     background: linear-gradient(
         -45deg,
-        #f9f8f8 20%,
-        #e4a9b2 45%,
-        #cda6ac 30%,
-        #2a2828 60%
+        #121212 20%,
+        #717071 30%,
+        #f3ebec 45%,
+        #cda6ac 60% 
     );
     background-size: 400% 400%;
     animation: gradientMovement 15s ease infinite;
@@ -50,9 +50,9 @@ body {
     padding: 30px 25px; /* Padding do card no desktop */
     border-radius: 30px;
     max-width: 420px; /* Largura máxima do card no desktop */
-    width: 90%; /* Ocupa 90% da largura disponível no wrapper */
+    width: 95%; /* Ocupa 90% da largura disponível no wrapper */
     height: auto;
-    max-height: 500px; /* Altura máxima controlada para desktop */
+    max-height: 600px; /* Altura máxima controlada para desktop */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 5px solid #cda6ac;
     box-sizing: border-box;
@@ -112,7 +112,10 @@ h1 {
     align-items: center;
     gap: 10px;
     transition: background 0.3s;
-    width: 100%; /* Garante que o botão se ajuste à largura do container */
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
     box-sizing: border-box; /* Garante que o padding não estoure o botão */
 }
 
@@ -153,7 +156,7 @@ footer {
         align-items: center;
         width: 100%;
         /* Controla o espaço entre o topo da tela do celular e o logo/card */
-        padding-top: 70px; /* **AJUSTE AQUI:** Se o conjunto todo estiver muito alto/baixo. */
+        padding-top: 50px; /* **AJUSTE AQUI:** Se o conjunto todo estiver muito alto/baixo. */
         margin: 20px auto; 
         max-width: 380px; /* Limita a largura do conjunto no celular */
     }
@@ -180,7 +183,7 @@ footer {
 
         /* Propriedades de posicionamento para a logo no CELULAR */
         position: absolute; /* ESSENCIAL: Mantém o comportamento de flutuar */
-        left: 50%;
+        left: 20%;
         transform: translateX(-50%); /* Centraliza horizontalmente */
         z-index: 10; /* Garante que esteja por cima */
 
