@@ -140,81 +140,44 @@ footer {
 }
 
 @media (max-width: 600px) {
-  .main-content-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px; /* espaço para a logo flutuar */
-    box-sizing: border-box;
+  .container {
+    max-width: 95%;
+    padding: 25px 15px;
   }
 
   .profile-img {
     position: absolute;
-    top: 0;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    z-index: 10;
-    border: 4px solid #cda6ac;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  }
-
-  .container {
-    width: 90%;
-    max-width: 420px;
-    padding: 40px 20px 100px 20px; /* padding-bottom aumentado */
-    background-color: #fff;
-    border-radius: 30px;
-    border: 5px solid #cda6ac;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: 3px solid #fff;
   }
 
   h1 {
-    font-size: 1.8em;
-    margin-top: 60px; /* espaço abaixo da logo */
-    margin-bottom: 15px;
+    margin-top: 100px;
+    font-size: 1.4em;
     text-align: center;
   }
 
-  .welcome {
-    text-align: center;
+  p {
     font-size: 1em;
-    margin-bottom: 30px;
-  }
-
-  .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    width: 100%;
-  }
-
-  .btn {
-    width: 100%;
-    max-width: 280px;
-    font-size: 1em;
-    padding: 12px 24px;
-    border-radius: 50px;
+    margin-bottom: 20px;
     text-align: center;
+  }
+
+  .link {
+    width: 100%;
+    max-width: 320px;
+    font-size: 1em;
   }
 
   footer {
-    margin-top: 20px;
-    margin-bottom: 15px;
-    padding: 0 15px;
+    margin-top: 40px;
     font-size: 0.85em;
     text-align: center;
+    position: relative;
   }
 }
+
