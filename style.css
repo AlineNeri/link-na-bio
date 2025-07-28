@@ -180,8 +180,8 @@ footer {
     }
 
 .profile-img {
-    width: 130px; /* Tamanho do logo no desktop */
-    height: 130px;
+    width: 110px; /* Tamanho do logo no desktop */
+    height: 110px;
     border-radius: 50%;
     object-fit: cover;
     /* REMOVIDO: margin-bottom: 20px; (incompatível com position: absolute) */
@@ -220,7 +220,7 @@ footer {
     }
 
     footer {
-        margin-top: 5px; /* Mantém o espaçamento IGUAL ao desktop */
+        margin-top: 3px; /* Mantém o espaçamento IGUAL ao desktop */
         font-size: 0.9em; /* Mantém o tamanho da fonte IGUAL ao desktop */
         padding: 0 15px; /* Mantém o padding IGUAL ao desktop */
     }
