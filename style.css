@@ -52,7 +52,7 @@ body {
     max-width: 420px; /* Largura máxima do card no desktop */
     width: 95%; /* Ocupa 90% da largura disponível no wrapper */
     height: auto;
-    max-height: 600px; /* Altura máxima controlada para desktop */
+    max-height: 500px; /* Altura máxima controlada para desktop */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 5px solid #cda6ac;
     box-sizing: border-box;
@@ -168,7 +168,7 @@ footer {
     max-width: 420px; /* Largura máxima do card no desktop */
     width: 95%; /* Ocupa 90% da largura disponível no wrapper */
     height: auto;
-    max-height: 600px; /* Altura máxima controlada para desktop */
+    max-height: 500px; /* Altura máxima controlada para desktop */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border: 5px solid #cda6ac;
     box-sizing: border-box;
@@ -180,7 +180,7 @@ footer {
     }
 
 .profile-img {
-    width: 110px; /* Tamanho do logo no desktop */
+    width: 100px; /* Tamanho do logo no desktop */
     height: 110px;
     border-radius: 50%;
     object-fit: cover;
