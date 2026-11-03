@@ -205,9 +205,8 @@ body::before {
         border-color 0.2s ease;
 }
 
-.btn:hover,
 .btn:active,
-.btn:focus {
+.btn:focus-visible {
     transform: translateY(-2px);
     background: var(--color-rose);
     border-color: #e7a9bd;
@@ -217,18 +216,23 @@ body::before {
         0 6px 14px rgba(95, 45, 65, 0.12);
 }
 
-@media (hover: none), (pointer: coarse) {
-    .btn {
+@media (hover: hover) and (pointer: fine) {
+    .btn:hover {
+        transform: translateY(-2px);
         background: var(--color-rose);
         border-color: #e7a9bd;
+        color: var(--color-heading);
         box-shadow:
-            0 0 8px rgba(242, 190, 207, 0.3),
-            0 3px 10px rgba(231, 169, 189, 0.12);
+            0 0 0 3px rgba(242, 190, 207, 0.2),
+            0 6px 14px rgba(95, 45, 65, 0.12);
     }
+}
 
+@media (hover: none), (pointer: coarse) {
     .btn:active {
         transform: scale(0.98);
-        background: var(--color-rose-border);
+        background: var(--color-rose);
+        border-color: #e7a9bd;
         box-shadow: 0 2px 6px rgba(95, 45, 65, 0.14);
     }
 }
@@ -308,8 +312,7 @@ body::before {
     }
 
     .btn:hover,
-    .btn:active,
-    .btn:focus {
+    .btn:active {
         transform: none;
     }
 }
