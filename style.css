@@ -217,6 +217,22 @@ body::before {
         0 6px 14px rgba(95, 45, 65, 0.12);
 }
 
+@media (hover: none), (pointer: coarse) {
+    .btn {
+        background: var(--color-rose);
+        border-color: #e7a9bd;
+        box-shadow:
+            0 0 8px rgba(242, 190, 207, 0.3),
+            0 3px 10px rgba(231, 169, 189, 0.12);
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+        background: var(--color-rose-border);
+        box-shadow: 0 2px 6px rgba(95, 45, 65, 0.14);
+    }
+}
+
 .btn:focus-visible {
     outline: 3px solid var(--color-rose-border);
     outline-offset: 3px;
