@@ -205,20 +205,10 @@ body::before {
         border-color 0.2s ease;
 }
 
-@media (hover: hover) {
-    .btn:hover {
-        transform: translateY(-2px);
-        background: var(--color-rose);
-        border-color: #e7a9bd;
-        color: var(--color-heading);
-        box-shadow:
-            0 0 0 3px rgba(242, 190, 207, 0.2),
-            0 6px 14px rgba(95, 45, 65, 0.12);
-    }
-}
-
+.btn:hover,
 .btn:active,
 .btn:focus {
+    transform: translateY(-2px);
     background: var(--color-rose);
     border-color: #e7a9bd;
     color: var(--color-heading);
@@ -301,7 +291,9 @@ body::before {
         transition: none;
     }
 
-    .btn:hover {
+    .btn:hover,
+    .btn:active,
+    .btn:focus {
         transform: none;
     }
 }
