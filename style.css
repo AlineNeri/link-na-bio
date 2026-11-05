@@ -216,6 +216,16 @@ body::before {
         0 6px 14px rgba(95, 45, 65, 0.12);
 }
 
+.btn.is-pressed {
+    transform: translateY(-2px) scale(0.99);
+    background: var(--color-rose);
+    border-color: #e7a9bd;
+    color: var(--color-heading);
+    box-shadow:
+        0 0 0 3px rgba(242, 190, 207, 0.2),
+        0 6px 14px rgba(95, 45, 65, 0.12);
+}
+
 @media (hover: hover) and (pointer: fine) {
     .btn:hover {
         transform: translateY(-2px);
@@ -312,7 +322,8 @@ body::before {
     }
 
     .btn:hover,
-    .btn:active {
+    .btn:active,
+    .btn.is-pressed {
         transform: none;
     }
 }
